@@ -29,3 +29,10 @@ async function registrarUsuario() {
     });
     const usuario = await request.json();
 }
+
+
+//Si un campo es nulo y no se quiere que aparezca asi en la base de datos se puede hacer la siguiente linea
+//let <nuevaVariable> = <datoObtenido> == null ? '-' : <datoObtenido>;
+// donde "?" sirve como un if para comprobar que lo que se encuentra a la izquierda se comprueba  y si se comprueba se asigna lo que esta a la derecha
+//en este caso si es nulo regresara un guion en el campo en lugar de la palabra null, y el ":" sirve para un else, que en caso de que no se cumpla la condición
+//te regrese el valor que si se obtiene
